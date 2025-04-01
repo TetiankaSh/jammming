@@ -1,9 +1,9 @@
 import React from 'react';
-import './Track.module.css';
+import styles from '../App/App.module.css';
 
 function Track({ track }) {
     return (
-        <div className="Track">
+        <div className={styles.Track}>
             <p>{track.name} by {track.artist}</p>
             <button>Add to Playlist</button>
         </div>

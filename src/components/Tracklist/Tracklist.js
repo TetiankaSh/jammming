@@ -1,10 +1,10 @@
 import React from 'react';
-import './Tracklist.module.css';
+import styles from '../App/App.module.css';
 import Track from '../Track/Track';
 
 function Tracklist({ tracks }) {
     return (
-        <div className="Tracklist">
+        <div className={styles.Tracklist}>
             {tracks.map(track => (
                 <Track key={track.id} track={track} />
             ))}

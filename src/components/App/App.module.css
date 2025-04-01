@@ -67,17 +67,33 @@ button {
 }
 
 .Playlist ul {
-    list-style: none;  /* Removes bullet points */
-    padding: 0;  /* Removes default padding */
-    margin: 0; /* Removes default margin */
-    text-align: center; /* Centers text */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers list items horizontally */
+    align-items: center;
 }
 
 .Playlist li {
     font-size: 1.2rem;
     margin: 10px 0;
+}
+
+.Tracklist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.track {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    color: white;
 }
 
