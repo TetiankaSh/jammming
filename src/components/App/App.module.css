@@ -14,7 +14,7 @@ body {
     flex-wrap: wrap;
 }
 
-.leftSide, .Playlist {
+.SearchResults, .Playlist {
     width: 45%;
     background: rgba(0, 0, 0, 0.3);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -35,17 +35,6 @@ body {
         flex-direction: column; /* Stacks children vertically on smaller screens */
         align-items: center; /* Centers content */
     }
-}
-
-.SearchResults {
-    width: 80%;
-    display: inline-block;
-    align-items: center;
-    margin: 1rem;
-    padding: 1.5rem;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {

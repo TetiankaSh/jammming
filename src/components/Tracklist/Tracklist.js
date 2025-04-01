@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../App/App.module.css';
 import Track from '../Track/Track';
 
-function Tracklist({ tracks }) {
+function Tracklist({ tracks, onSelectTrack }) {
     return (
         <div className={styles.Tracklist}>
             {tracks.map(track => (
