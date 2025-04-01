@@ -3,6 +3,49 @@ body {
     color: white;
     font-family: 'Poppins', 'Arial', sans-serif;
     text-align: center;
+    
+}
+
+.Main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.leftSide, .Playlist {
+    width: 45%;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .leftSide, .Playlist {
+        width: 100%; /* Makes both elements stack vertically on smaller screens */
+    }
+
+    .App {
+        flex-direction: column; /* Stacks children vertically on smaller screens */
+        align-items: center; /* Centers content */
+    }
+}
+
+.SearchResults {
+    width: 80%;
+    display: inline-block;
+    align-items: center;
+    margin: 1rem;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
@@ -53,17 +96,15 @@ button {
     border-radius: 50px;
     cursor: pointer;
     box-shadow: 0px 0px 15px rgba(255, 0, 255, 0.5);
-    transition: 0.3s;
+    transition: background-color 0.3s, transform 0.1s ease-in-out;
 }
 
-.SearchResults, .Playlist {
-    width: 45%;
-    display: inline-block;
-    margin: 1rem;
-    padding: 1.5rem;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+button:hover {
+    background: linear-gradient(135deg, #8a2be2, #ff00ff);
+}
+
+button:active {
+    background: linear-gradient(135deg, #6a1b9a, #6a00b3);
 }
 
 .Playlist ul {
@@ -84,7 +125,7 @@ button {
 .Tracklist {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .track {

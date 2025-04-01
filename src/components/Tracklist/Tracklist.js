@@ -6,7 +6,10 @@ function Tracklist({ tracks }) {
     return (
         <div className={styles.Tracklist}>
             {tracks.map(track => (
-                <Track key={track.id} track={track} />
+                <div key={track.id} className={styles.track}>
+                    <p>{track.name} - {track.artist} ({track.album})</p>
+                    <button onClick={() => onSelectTrack(track)}>Select</button>
+                </div>
             ))}
         </div>
     );
