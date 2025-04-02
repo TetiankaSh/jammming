@@ -14,7 +14,7 @@ function Tracklist({ tracks, onSelectTrack, selectedTracks = []}) {
                     <button onClick={() => onSelectTrack(track)}
                         className={isSelected ? styles.unselectButton : styles.button}
                     >
-                        {isSelected ? "Unselect" : "Select"}
+                        {isSelected ? "Remove" : "Add to my playlist"}
                     </button>
                 </div>
             );
