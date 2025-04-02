@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from '../App/App.module.css';
+import Tracklist from '../Tracklist/Tracklist';
 
-function Playlist( {selectedTracks, onSave } ) {
+function Playlist( {selectedTracks, onSave, playlistName, playlistTracks, setPlaylistName } ) {
     /* const mockPlaylist = [
         { id: 1, name: "Track 1", artist: "Artist 1" },
         { id: 2, name: "Track 2", artist: "Artist 2" },
@@ -9,7 +10,11 @@ function Playlist( {selectedTracks, onSave } ) {
 
     return (
         <div className={styles.Playlist}>
-            <h2>Your Playlist</h2>
+            <input 
+                type="text"
+                value={playlistName}
+                onChange={(e) => setPlaylistName(e.target.value)}
+            />
             <ul>
                 {selectedTracks.map(track => (
                     <li key={track.id}>{track.name} by {track.artist} ({track.album})</li>

@@ -27,14 +27,14 @@ body {
 }
 
 @media (max-width: 768px) {
-    .leftSide, .Playlist {
-        width: 100%; /* Makes both elements stack vertically on smaller screens */
+    .SearchResults, .Playlist {
+        width: 100%;
     }
 
-    .App {
-        flex-direction: column; /* Stacks children vertically on smaller screens */
-        align-items: center; /* Centers content */
-    }
+    .Main {
+        flex-direction: column; 
+        align-items: center; 
+}
 }
 
 h1 {
@@ -94,6 +94,26 @@ button:hover {
 
 button:active {
     background: linear-gradient(135deg, #6a1b9a, #6a00b3);
+}
+
+.unselectButton {
+    margin-bottom: 1rem;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    background: linear-gradient(135deg, #888888, #555555);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(128, 128, 255, 0.5);
+    transition: background-color 0.3s, transform 0.1s ease-in-out;
+}
+
+.unselectButton:hover {
+    background: linear-gradient(135deg, #777777, #444444);
+    transform: scale(1.05);
 }
 
 .Playlist ul {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from '../App/App.module.css';
 import Tracklist from '../Tracklist/Tracklist';
 
-function SearchResults({ onSelectTrack }) {
+function SearchResults({ onSelectTrack, selectedTracks }) {
     const [tracks, setTracks] = useState([]);
 
     useEffect(() => {
@@ -19,7 +19,7 @@ function SearchResults({ onSelectTrack }) {
         <div className={styles.SearchResults}>
             <h2>Search Results</h2>
             {/* Pass fetched tracks and handleSelectTrack to Tracklist */}
-            <Tracklist tracks={tracks} onSelectTrack={onSelectTrack} />
+            <Tracklist tracks={tracks} onSelectTrack={onSelectTrack} selectedTracks={selectedTracks}/>
         </div>
     );
 };
