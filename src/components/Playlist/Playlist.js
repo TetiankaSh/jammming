@@ -12,7 +12,7 @@ function Playlist( {selectedTracks, onSave } ) {
             <h2>Your Playlist</h2>
             <ul>
                 {selectedTracks.map(track => (
-                    <li key={track.id}>{track.name} by {track.artist}</li>
+                    <li key={track.id}>{track.name} by {track.artist} ({track.album})</li>
                 ))}
             </ul>
             {selectedTracks.length > 0 && (
