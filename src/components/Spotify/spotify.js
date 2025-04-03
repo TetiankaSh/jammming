@@ -83,7 +83,51 @@ const Spotify = {
         } catch (error) {
             console.error("❌ Error:", error);
         }
-    }
+    },
+
+    async searchTracks(query) {
+        if(!query) {
+            console.error("❌ No search query provided");
+            return [];
+        }
+
+        const token = this.getAccessToken();
+        if(!token) {
+            console.error("❌ No access token available");
+            return [];
+        }
+
+        const headers = {
+            Authorization: `Bearer ${token}`,
+            'Content-type': 'application/json',
+        };
+
+        try {
+            console.log(`🔎 Searching for "${query}"...`);
+            const response = await fetch(`https://api.spotify.com/v1/search?type=track&q=${encodeURIComponent(query)}`, { headers });
+
+            if(!response.ok) throw new Error(`Search failed: ${response.statusText}`);
+
+            const data = await response.json();
+            if (!data.tracks || !data.tracks.items) {
+            throw new Error("No tracks found in response");
+        }
+            const tracks = data.tracks.items.map(track => ({
+                    id: track.id,
+                    name: track.name,
+                    artist: track.artists.map(artist => artist.name).join(", "),
+                    album: track.album.name,
+                    uri: track.uri,
+                }));
+
+                console.log("✅ Search results:", tracks);
+                return tracks;
+        } catch(error) {
+            console.error("❌ Search error:", error);
+            return [];
+        }
+
+    },
 };
 
 export default Spotify;
