@@ -8,10 +8,13 @@ body {
 
 .Main {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: center;
     align-items: flex-start;
     width: 100%;
+    max-width: 1600px; 
+    margin: 0 auto; 
+    padding: 20px;
+    gap: 20px; 
 }
 
 .SearchResults, .Playlist {
@@ -23,6 +26,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
+}
+
+.toBeSavedPlaylist, .savedPlaylist {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);  /* Makes the background darker for better visibility */
+    padding: 15px;
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 

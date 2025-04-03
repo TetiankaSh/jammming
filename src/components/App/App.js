@@ -11,7 +11,7 @@ function App() {
     const [selectedTracks, setSelectedTracks] = useState([]);
     const [tracks, setTracks] = useState([]);
 
-    const [playlistName, setPlaylistName] = useState('My New Playlist');
+    const [playlistName, setPlaylistName] = useState('');
     const [playlistTracks, setPlaylistTracks] = useState([]);
 
     const savePlaylist = async () => {
